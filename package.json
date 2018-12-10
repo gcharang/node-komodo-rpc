@@ -22,7 +22,7 @@
   "homepage": "https://github.com/drazisil/node-bitcoin-rpc#readme",
   "devDependencies": {
     "coveralls": "^3.0.0",
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.0",
     "gulp-coveralls": "^0.1.4",
     "gulp-istanbul": "^1.1.1",
     "gulp-standard": "^11.0.0",
