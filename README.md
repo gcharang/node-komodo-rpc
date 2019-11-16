@@ -3,36 +3,36 @@
 nodejs json-rpc for Komodo and Smart Chains, with Promises and support for multiple instances
 
 - Supports on-the-fly RPC methods using [Proxies](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy); all the RPC methods supported by a daemon (including the Antara API) are available
-- Supports multiple instances (different daemons) in the same program
-- Works in Node and in Browser (only direct supply of credentials is supported in the browser)
+- Supports multiple instances (different daemons) in the same application
+- Works only in Nodejs; for the browser version, [click here](https://www.npmjs.com/package/komodo-rpc-js)
 - Very small codebase
 - Uses [axios](https://github.com/axios/axios) behind the scenes
 
 ## Instructions
 
 1. `require()` the module; it imports a class
-2. launch a `new` intance of the class with a config object as the argument; the config object can contain the credentials directly or one of the following other ways (only available in nodejs) to access them
+2. launch a `new` instance of the class with a config object as the argument; the config object can contain the credentials directly or one of the following other ways to access them
    - datadir Ex: `{ datadir: "/home/username/.komodo/LABS" }`
    - name Ex: `{ name: "Rick" }`
    - conffile Ex: `{ conffile: "/home/username/.komodo/MORTY/MORTY.conf" }`
-3. call `.config` with the new instance object to access it's config
+3. call `.config` with the new instance object to access its config
 4. call `.rpc()` with the new instance object to access the RPC interface
 
 ## Usage
 
-Passing the credentials directly (This is the only method supported in the browser)
+Passing the credentials directly
 
 ```js
 const SmartChain = require("node-komodo-rpc");
 
-const creds = {
+const config = {
   rpchost: "localhost",
   rpcport: 7771,
   rpcuser: "user316977",
   rpcpassword: "pass47aac855ee750dab0128962d29e85920cbb8ad730d0e0307"
 };
 
-const komodo = new SmartChain({ creds });
+const komodo = new SmartChain({ config });
 
 console.log(komodo.config); // Prints the config being used by the komodo instance
 
@@ -121,4 +121,4 @@ Descriptions of the properties
 
 ## Defaults
 
-If the `creds` object is missing the keys: `rpchost` or `rpcport`, the default values used are `localhost` and `7771` respectively. When the `creds` object is passed, `NAME`, `DATADIR` and `CONFFILE` are set to be `undefined`
+If the `config` object is missing the keys: `rpchost` or `rpcport`, the default values used are `localhost` and `7771` respectively. When the `config` object is passed, `NAME`, `DATADIR` and `CONFFILE` are set to be `undefined`
