@@ -1,6 +1,6 @@
 {
   "name": "node-komodo-rpc",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "nodejs json-rpc for Komodo and Smart Chains, with Promises and support for multiple instances",
   "main": "./lib/index.js",
   "scripts": {
