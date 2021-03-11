@@ -3,8 +3,7 @@
   "version": "2.0.3",
   "description": "nodejs json-rpc for Komodo and Smart Chains, with Promises and support for multiple instances",
   "main": "./lib/index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gcharang/node-komodo-rpc.git"
@@ -19,13 +18,16 @@
     "name": "gcharang",
     "email": "gcharang@komodoplatform.com"
   },
-  "contributors": ["Joseph W Becher <jwbecher@drazisil.com>", "Monty Anderson <work@montyanderson.net>"],
+  "contributors": [
+    "Joseph W Becher <jwbecher@drazisil.com>",
+    "Monty Anderson <work@montyanderson.net>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gcharang/node-komodo-rpc/issues"
   },
   "homepage": "https://github.com/gcharang/node-komodo-rpc#readme",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.21.1"
   }
 }
